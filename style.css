@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Prata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.4s ease-in;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 75px;
+  line-height: 75px;
+  background: #0a0a0b;
+}
+
+nav .logo {
+  color: white;
+  font-family: prata;
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: 0.5;
+}
+
+nav .nav-list {
+  display: flex;
+}
+
+nav .nav-list .nav-item {
+  cursor: pointer;
+  height: 100%;
+  padding: 0 30px;
+  transition: 0.4s;
+}
+
+nav .nav-list .nav-item:hover {
+  background: #ebda4b;
+}
+
+nav .nav-list .nav-link {
+  color: #474748;
+  font-size: 1.125em;
+  font-weight: 500;
+  font-family: inter;
+}
+
+button {
+  height: 70%;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #ebda4b;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+.btn span {
+  font-size: 1em;
+  font-family: prata;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.933);
+  /* align-self: center; */
+  padding-bottom: 10px;
+  /* color: #ffffff; */
+}
+
+button:hover {
+  border: 1px solid #ebda4b;
+  /* background-color: transparent; */
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px 1px #ebda4b;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@media (max-width: 700px) {
+  nav {
+    padding: 0 5%;
+  }
+
+  nav .nav-list .nav-item {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  nav .nav-list {
+    display: grid;
+    position: absolute;
+    background: #474748;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+    transition: 0.6s;
+  }
+
+  nav .nav-list .nav-item {
+    padding-left: 30px;
+  }
+
+  nav .hamburger-menu {
+    display: grid !important;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+nav .hamburger-menu {
+  display: none;
+  height: min-content;
+  margin: 18px -10px 0 0;
+  cursor: pointer;
+}
+
+nav .hamburger-menu .bar {
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: radius 10%;
+  transition: 0.4s;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ nav .nav-list {
+  transform: translateY(0%);
+}
+
+/* MAIN-CONTENT STARTS HERE */
+
+section {
+  padding: 0 5%;
+  background: #0a0a0b;
+  color: #ffffff;
+}
+
+.note h1 {
+  font-size: 1.6em;
+  font-family: prata, "inter";
+  font-weight: 400;
+  /* width: 70%; */
+  margin: 0%;
+  line-height: 1.5;
+}
+
+.note p {
+  font-size: 0.7em;
+  font-weight: 400;
+  font-family: inter;
+  line-height: 1.6;
+  color: #848484;
+  padding-bottom: 5%;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+
+.tinder {
+  width: 100px;
+  display: flex;
+  /* width: 70%; */
+  justify-content: flex-start;
+  align-items: center;
+  place-content: center;
+}
+
+/* .tinder img {
+  display: block;
+  position: absolute;
+} */
+
+/* .img1 {
+  top: 0;
+} */
+
+/* .tinder:last-child {
+  width: min-content;
+} */
+
+.container .company img {
+  width: 100%;
+  height: auto;
+}
+
+.container .company a {
+  font-size: 2em;
+  font-family: prata;
+  font-weight: 400;
+  color: aliceblue;
+  padding-top: 3%;
+}
+
+.container .company p {
+  font-size: 0.7em;
+  font-family: inter;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #848484;
+  padding-bottom: 5%;
+}
+
+/* SECOND SECOND STARTS HERE */
+
+.text {
+  background: #2e3038;
+  padding-top: 5%;
+}
+
+.split .split-side {
+  padding-bottom: 5%;
+}
+
+.split .split-side h3 {
+  font-size: 1.6em;
+  color: #ffffff;
+  font-family: prata;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.split .split-side p {
+  font-size: 0.7em;
+  font-family: inter;
+  font-weight: 400;
+  line-height: 1.3;
+  padding-bottom: 5%;
+  color: #adadad;
+}
+
+/* SECOND SECTION END HERE ! */
+
+/* THIRD SECTION STARTS HERE */
+
+.connect {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.connect .me h3 {
+  font-size: 1em;
+  font-family: prata;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+  word-spacing: 0.5;
+}
+
+.connect .me p {
+  font-size: 0.7em;
+  font-family: inter;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #adadad;
+}
+
+.connect-btn span {
+  color: #0a0a0b;
+  font-size: 1em;
+  font-family: inter;
+  font-weight: 400;
+}
+
+/* THIRD SECTION ENDS HERE */
+
+/* FOOTER STARTS HERE */
+
+.footer {
+  padding: 5%;
+  background: #474748;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+  font-family: prata;
+  font-size: 0.75rem;
+  font-weight: 100;
+  letter-spacing: 0.5;
+  /* padding-top: 0%; */
+}
+
+/* MODILE SCREEN SIDE DONE */
+
+/* MEDIA FOR LAPTOP STARTS HERE */
+
+@media (min-width: 992px) {
+  .note {
+    width: 60%;
+    padding: 20px 0;
+  }
+
+  .note h1 {
+    font-size: 2rem;
+    font-family: prata;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .note p {
+    font-size: 1rem;
+    font-family: inter;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .icon {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 40px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tinder {
+    margin-top: -5px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .company {
+    width: 70%;
+  }
+
+  .text {
+    width: 100%;
+    padding: 2%, 5%;
+  }
+
+  .split {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 76px;
+  }
+
+  .split .split-side 2 {
+    width: 40%;
+    flex-grow: 1;
+    /* margin-left: 20px; */
+  }
+
+  .split-side h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .split-side p {
+    text-align: left;
+    letter-spacing: 1.3;
+  }
+
+  .connect {
+    /* width: 100%; */
+    padding-top: 4%;
+    padding-bottom: 2%;
+    text-align: left;
+  }
+
+  .connect .me {
+    width: 50%;
+  }
+  .me h3 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  /* .me .btn {
+    padding: 15px;
+  }
+  .btn span {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0%;
+  } */
+}
